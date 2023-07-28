@@ -33,7 +33,6 @@ class ProductApi(APIView):
         })
 
     def get(self, request):
-        
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
         return Response({
