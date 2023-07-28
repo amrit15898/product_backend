@@ -23,7 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home_page),
     path("post-product", ProductApi.as_view()),
-path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh')
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path("show-one-product/<id>", ReterieveDeleteApi.as_view()),
+    path("add-item", AddToCart.as_view())
+
     
 ]

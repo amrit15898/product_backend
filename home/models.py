@@ -10,7 +10,7 @@ class Card(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class CartItems(models.Model):
-    cart = models.ForeignKey(Card, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Card, on_delete=models.CASCADE, related_name="cart_items")
     item = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 
